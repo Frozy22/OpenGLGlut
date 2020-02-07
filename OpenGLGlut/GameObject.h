@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 using namespace Utility;
 
@@ -7,46 +7,46 @@ class GameObject
 {
 
 private:
-    static unsigned long last_id; // Последний свободный ID
-    unsigned long id; // ID объекта
+    static unsigned long last_id; // РџРѕСЃР»РµРґРЅРёР№ СЃРІРѕР±РѕРґРЅС‹Р№ ID
+    unsigned long id; // ID РѕР±СЉРµРєС‚Р°
 
 protected:
-    static std::vector<GameObject*> gameObjects; // Список всех объектов
-    GameObject* parent = nullptr; // Родитель объекта
-    std::vector<Vector2f> vertices; // Форма объекта
+    static std::vector<GameObject*> gameObjects; // РЎРїРёСЃРѕРє РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ
+    GameObject* parent = nullptr; // Р РѕРґРёС‚РµР»СЊ РѕР±СЉРµРєС‚Р°
+    std::vector<Vector2f> vertices; // Р¤РѕСЂРјР° РѕР±СЉРµРєС‚Р°
 
 public:
-    Color color = Color(1.0f); // Цвет объекта
+    Color color = Color(1.0f); // Р¦РІРµС‚ РѕР±СЉРµРєС‚Р°
 
-    Vector2f position = Vector2f(0.0f, 0.0f); // Позиция объекта
-    float rotation = 0.0f; // Угол поворота объекта
-    Vector2f scale = Vector2f(1.0f, 1.0f); // Масштаб объекта
+    Vector2f position = Vector2f(0.0f, 0.0f); // РџРѕР·РёС†РёСЏ РѕР±СЉРµРєС‚Р°
+    float rotation = 0.0f; // РЈРіРѕР» РїРѕРІРѕСЂРѕС‚Р° РѕР±СЉРµРєС‚Р°
+    Vector2f scale = Vector2f(1.0f, 1.0f); // РњР°СЃС€С‚Р°Р± РѕР±СЉРµРєС‚Р°
 
     GameObject(Vector2f position = Vector2f(0.0f, 0.0f), float rotation = 0.0f, Vector2f scale = Vector2f(1.0f, 1.0f), Color color = Color(1), unsigned num = 0, ...);
     GameObject(std::vector<Vector2f> vs, Color color = Color(1), Vector2f position = Vector2f(0.0f, 0.0f), float rotation = 0.0f, Vector2f scale = Vector2f(1.0f, 1.0f));
 
-    virtual void start(); // Функция старта
-    virtual void update(); // Функция обновления
-    virtual void draw(); // Функция отрисовки
+    virtual void start(); // Р¤СѓРЅРєС†РёСЏ СЃС‚Р°СЂС‚Р°
+    virtual void update(); // Р¤СѓРЅРєС†РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ
+    virtual void draw(); // Р¤СѓРЅРєС†РёСЏ РѕС‚СЂРёСЃРѕРІРєРё
 
-    static void Destroy(GameObject obj); // Уничтожение объекта
+    static void Destroy(GameObject obj); // РЈРЅРёС‡С‚РѕР¶РµРЅРёРµ РѕР±СЉРµРєС‚Р°
 
-    static GameObject Instantiate(GameObject* prefab); // Регистрация объекта
+    static GameObject Instantiate(GameObject* prefab); // Р РµРіРёСЃС‚СЂР°С†РёСЏ РѕР±СЉРµРєС‚Р°
 
-    static void Start(); // Вызов функции старта у всех обхектов
-    static void Update(); // Вызов функции обновления у всех обхектов
-    static void Draw(); // Вызов функции отрисовки у всех обхектов
+    static void Start(); // Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё СЃС‚Р°СЂС‚Р° Сѓ РІСЃРµС… РѕР±С…РµРєС‚РѕРІ
+    static void Update(); // Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё РѕР±РЅРѕРІР»РµРЅРёСЏ Сѓ РІСЃРµС… РѕР±С…РµРєС‚РѕРІ
+    static void Draw(); // Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё РѕС‚СЂРёСЃРѕРІРєРё Сѓ РІСЃРµС… РѕР±С…РµРєС‚РѕРІ
 
-    void setParent(GameObject* parent); // Назначение родителя
-    void removeParent(); // Удаление родителя
-    GameObject* getParent(); // Возвращение родителя
+    void setParent(GameObject* parent); // РќР°Р·РЅР°С‡РµРЅРёРµ СЂРѕРґРёС‚РµР»СЏ
+    void removeParent(); // РЈРґР°Р»РµРЅРёРµ СЂРѕРґРёС‚РµР»СЏ
+    GameObject* getParent(); // Р’РѕР·РІСЂР°С‰РµРЅРёРµ СЂРѕРґРёС‚РµР»СЏ
 
-    Vector2f getGlobalPos(); // Возвращение позиции учитывая позицию родителя
-    float getGlobalRot(); // Возвращение поворота учитывая поворот родителя
-    Vector2f getGlobalScl(); // Возвращение масштаба учитывая масштаб родителя
+    Vector2f getGlobalPos(); // Р’РѕР·РІСЂР°С‰РµРЅРёРµ РїРѕР·РёС†РёРё СѓС‡РёС‚С‹РІР°СЏ РїРѕР·РёС†РёСЋ СЂРѕРґРёС‚РµР»СЏ
+    float getGlobalRot(); // Р’РѕР·РІСЂР°С‰РµРЅРёРµ РїРѕРІРѕСЂРѕС‚Р° СѓС‡РёС‚С‹РІР°СЏ РїРѕРІРѕСЂРѕС‚ СЂРѕРґРёС‚РµР»СЏ
+    Vector2f getGlobalScl(); // Р’РѕР·РІСЂР°С‰РµРЅРёРµ РјР°СЃС€С‚Р°Р±Р° СѓС‡РёС‚С‹РІР°СЏ РјР°СЃС€С‚Р°Р± СЂРѕРґРёС‚РµР»СЏ
 
-    void ReShape(unsigned num, Vector2f n, ...); // Изменение формы
-    void ReShape(std::vector<Vector2f> vs); // Изменение формы
+    void ReShape(unsigned num, Vector2f n, ...); // РР·РјРµРЅРµРЅРёРµ С„РѕСЂРјС‹
+    void ReShape(std::vector<Vector2f> vs); // РР·РјРµРЅРµРЅРёРµ С„РѕСЂРјС‹
 
     bool operator ==(GameObject obj);
 

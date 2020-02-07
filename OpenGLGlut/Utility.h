@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 namespace Utility {
 
@@ -24,22 +24,22 @@ namespace Utility {
 
         Vector2f right();
 
-        static float dot(Vector2f a, Vector2f b); // Скалярное произведение векторов
+        static float dot(Vector2f a, Vector2f b); // РЎРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РІРµРєС‚РѕСЂРѕРІ
 
-        float angle(); // Направление вектора
+        float angle(); // РќР°РїСЂР°РІР»РµРЅРёРµ РІРµРєС‚РѕСЂР°
 
-        static float angle(Vector2f v); // Направление вектора
+        static float angle(Vector2f v); // РќР°РїСЂР°РІР»РµРЅРёРµ РІРµРєС‚РѕСЂР°
 
-        static float angle(Vector2f a, Vector2f b); // Угол между векторами
+        static float angle(Vector2f a, Vector2f b); // РЈРіРѕР» РјРµР¶РґСѓ РІРµРєС‚РѕСЂР°РјРё
 
-        static Vector2f normilize(Vector2f v); // Нормализованный вектор
+        static Vector2f normilize(Vector2f v); // РќРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅС‹Р№ РІРµРєС‚РѕСЂ
 
-        Vector2f normilize(); // Нормализованный вектор
+        Vector2f normilize(); // РќРѕСЂРјР°Р»РёР·РѕРІР°РЅРЅС‹Р№ РІРµРєС‚РѕСЂ
 
-        static float length(Vector2f v); // Длина вектора
-        float length(); // Длина вектора
+        static float length(Vector2f v); // Р”Р»РёРЅР° РІРµРєС‚РѕСЂР°
+        float length(); // Р”Р»РёРЅР° РІРµРєС‚РѕСЂР°
 
-        static float distance(Vector2f a, Vector2f b); // Расстояние между векторами
+        static float distance(Vector2f a, Vector2f b); // Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РІРµРєС‚РѕСЂР°РјРё
 
         Vector2f operator +=(Vector2f v);
         Vector2f operator -=(Vector2f v);
@@ -63,5 +63,5 @@ namespace Utility {
         Color operator =(Color c);
     };
 
-    std::vector<Vector2f> generate_circle(float radius, float segments); // Генерация круга с радиусом и количеством сегментов
+    std::vector<Vector2f> generate_circle(float radius, float segments); // Р“РµРЅРµСЂР°С†РёСЏ РєСЂСѓРіР° СЃ СЂР°РґРёСѓСЃРѕРј Рё РєРѕР»РёС‡РµСЃС‚РІРѕРј СЃРµРіРјРµРЅС‚РѕРІ
 }

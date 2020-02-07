@@ -1,4 +1,4 @@
-#include <Windows.h>
+Ôªø#include <Windows.h>
 #include <glut.h>
 #include <cmath>
 #include <vector>
@@ -82,7 +82,7 @@ namespace Utility {
         return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
     }
 
-    // Œœ≈–¿“Œ–€ vec2
+    // –û–ü–ï–†–ê–¢–û–†–´ vec2
 #if true
 
     Vector2f Vector2f::operator +=(Vector2f v) {
@@ -168,7 +168,7 @@ namespace Utility {
         this->a = c;
     }
 
-    // Œœ≈–¿“Œ–€ color
+    // –û–ü–ï–†–ê–¢–û–†–´ color
 #if true
 
     Color Color::operator =(Color c) {

@@ -1,4 +1,4 @@
-#include <glut.h>
+﻿#include <glut.h>
 #include <conio.h>
 #include "Input.h"
 

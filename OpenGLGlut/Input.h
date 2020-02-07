@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 class Input
 {
@@ -15,12 +15,12 @@ private:
     static void keySpecialDown(int key, int x, int y);
     static void keySpecialUp(int key, int x, int y);
 public:
-    static void Init(); // Инициализация управления
-    static void Update(); // Функция обновления управления
-    static bool getNormalKey(unsigned char key); // Стандартная клавиша зажата
-    static bool getNormalDown(unsigned char key); // Стандартная клавиша нажата
-    static bool getNormalUp(unsigned char key); // Стандартная клавиша отпущена
-    static bool getSpecialKey(unsigned char key); // Специальная клавиша зажата
-    static bool getSpecialDown(unsigned char key); // Специальная клавиша нажата
-    static bool getSpecialUp(unsigned char key); // Специальная клавиша отпущена
+    static void Init(); // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СѓРїСЂР°РІР»РµРЅРёСЏ
+    static void Update(); // Р¤СѓРЅРєС†РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СѓРїСЂР°РІР»РµРЅРёСЏ
+    static bool getNormalKey(unsigned char key); // РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ РєР»Р°РІРёС€Р° Р·Р°Р¶Р°С‚Р°
+    static bool getNormalDown(unsigned char key); // РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ РєР»Р°РІРёС€Р° РЅР°Р¶Р°С‚Р°
+    static bool getNormalUp(unsigned char key); // РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ РєР»Р°РІРёС€Р° РѕС‚РїСѓС‰РµРЅР°
+    static bool getSpecialKey(unsigned char key); // РЎРїРµС†РёР°Р»СЊРЅР°СЏ РєР»Р°РІРёС€Р° Р·Р°Р¶Р°С‚Р°
+    static bool getSpecialDown(unsigned char key); // РЎРїРµС†РёР°Р»СЊРЅР°СЏ РєР»Р°РІРёС€Р° РЅР°Р¶Р°С‚Р°
+    static bool getSpecialUp(unsigned char key); // РЎРїРµС†РёР°Р»СЊРЅР°СЏ РєР»Р°РІРёС€Р° РѕС‚РїСѓС‰РµРЅР°
 };
